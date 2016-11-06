@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Region:</strong>
+  <%= @purchase.region %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @purchase.user %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @purchase.date %>
+</p>
+
+<%= link_to 'Edit', edit_purchase_path(@purchase) %> |
+<%= link_to 'Back', purchases_path %>

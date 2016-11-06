@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "display_name": "Class I recall",
+    "description": "a situation in which there is a reasonable probability that the use of or exposure to a violative product will cause serious adverse health consequences or death."
+  },
+  {
+    "id": 2,
+    "display_name": "Class II recall",
+    "description": "a situation in which use of or exposure to a violative product may cause temporary or medically reversible adverse health consequences or where the probability of serious adverse health consequences is remote."
+  },
+  {
+    "id": 3,
+    "display_name": "Class III recall",
+    "description": "a situation in which use of or exposure to a violative product is not likely to cause adverse health consequences."
+  },
+  {
+    "id": 4,
+    "display_name": "Market withdrawal",
+    "description": "occurs when a product has a minor violation that would not be subject to FDA legal action. The firm removes the product from the market or corrects the violation. For example, a product removed from the market due to tampering, without evidence of manufacturing or distribution problems, would be a market withdrawal."
+  },
+  {
+    "id": 5,
+    "display_name": "Medical device safety alert",
+    "description": "issued in situations where a medical device may present an unreasonable risk of substantial harm. In some case, these situations also are considered recalls."
+  }
+]

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  upc_code: MyString
+  product_code: MyString
+  sell_by_date: 2016-10-13 03:18:51
+  image_id_id: 
+
+two:
+  name: MyString
+  upc_code: MyString
+  product_code: MyString
+  sell_by_date: 2016-10-13 03:18:51
+  image_id_id: 

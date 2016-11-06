@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  product_id: 
+  reason: MyString
+  level_id: 
+  region_id: 
+  contact_id: 
+  date: 2016-10-13 03:12:42
+
+two:
+  product_id: 
+  reason: MyString
+  level_id: 
+  region_id: 
+  contact_id: 
+  date: 2016-10-13 03:12:42

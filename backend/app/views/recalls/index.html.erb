@@ -1,0 +1,80 @@
+<div class="container">
+  
+  <%= render 'header' %>
+  
+  <p id="notice"><%= notice %></p>
+  
+  <div>
+    <h1>Listing Recalls</h1>
+    
+    <% if !@upc_code.nil? %>
+        <span class="label label-danger"> upc_code= <%= @upc_code %> </span>
+    <% end %>  
+  
+    <table class="table">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>Product</th>
+          <th>Reason</th>
+          <th>Level</th>
+          <th>Region</th>
+          <th>Contact</th>
+          <th>Date</th>
+          <th colspan="7"></th>
+        </tr>
+      </thead>
+    
+      <tbody>
+        <% @recalls.each do |recall| %>
+          <tr>
+            <td><%= recall.id %></td>
+            <td><%= link_to recall.product.name, recall.product %></td>
+            <td><%= recall.reason %></td>
+            <td><%= link_to recall.level.display_name, recall.level %></td>
+            <td><%= link_to recall.region.display_name, recall.region %></td>
+            <td>
+              <%= 
+                if !Contact.find_by_id(recall.contact_id) .nil?
+                  link_to "Contacts", Contact.find_by_id(recall.contact_id)
+                else
+                  raw("no_contacts")
+                end
+              %>  
+            </td>
+            <td><%= recall.date %></td>
+            <td><%= link_to 'Show', recall %></td>
+            <td><%= link_to 'Edit', edit_recall_path(recall) %></td>
+            <td><%= link_to 'Destroy', recall, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  
+  <a href="/recalls/new" class="btn btn-default" role="button">New Recall</a></a>
+
+  <div>
+      <h1>Batch Upload</h1>
+      <%= form_tag("/recalls/upload", method: "post", class: "form-horizontal") do %>
+          <div class="form-group">
+              <div class="col-sm-10">
+                <%= text_area_tag :json_data, nil, :required => true, 
+                :rows => 10, :class => "form-control",
+                :placeholder => "[\n\t{\n\t\t\"id\": 1,\n\t\t 
+                \"product_id\": 1,\n\t\t
+                \"reason\": unidentified sources.\n\t\t
+                \"level_id\": 1,\n\t\t
+                \"region_id\": 1,\n\t\t
+                \"contact_id\": 1,\n\t\t
+                \"date\": \"October 17, 2016\"\n\t}\n]"%>
+              </div>
+          </div>
+          <div class="form-group">
+              <div class="col-sm-10">
+                  <%= submit_tag("Upload", :class => "btn btn-default" ) %>
+              </div>
+          </div>
+      <% end %>
+  </div>
+</div>

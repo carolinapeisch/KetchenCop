@@ -1,0 +1,54 @@
+<div class="container">
+
+  <%= render 'header' %>
+  <p id="notice"><%= notice %></p>
+  
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Name</h3>
+    </div>
+    <div class="panel-body">
+       <%= @product.name %>
+    </div>
+  </div>
+  
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">UPC Code</h3>
+    </div>
+    <div class="panel-body">
+       <%= @product.upc_code %>
+    </div>
+  </div>
+  
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Product Code</h3>
+    </div>
+    <div class="panel-body">
+       <%= @product.product_code %>
+    </div>
+  </div>
+  
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Sell by Date</h3>
+    </div>
+    <div class="panel-body">
+       <%= @product.sell_by_date %>
+    </div>
+  </div>
+  
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Image</h3>
+    </div>
+    <div class="panel-body">
+      <td><%= link_to Image.find_by_id(@product.image_id).filename, Image.find_by_id(@product.image_id) %></td>
+    </div>
+  </div>
+  
+  <%= link_to 'Edit', edit_product_path(@product), :class => 'btn btn-primary spacer' %>
+  <%= link_to 'Back', products_path, :class => 'btn btn-primary spacer' %>
+
+</div>

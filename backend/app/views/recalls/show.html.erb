@@ -1,0 +1,69 @@
+<div class="container">
+
+  <%= render 'header' %>
+  <p id="notice"><%= notice %></p>
+  
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Product</h3>
+    </div>
+    <div class="panel-body">
+      <%= link_to @recall.product.name, @recall.product %>
+    </div>
+  </div>
+  
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Reason</h3>
+    </div>
+    <div class="panel-body">
+       <%= @recall.reason %>
+    </div>
+  </div>
+  
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Level</h3>
+    </div>
+    <div class="panel-body">
+       <%= link_to @recall.level.display_name, @recall.level %>
+    </div>
+  </div>
+  
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Region</h3>
+    </div>
+    <div class="panel-body">
+      <%= link_to @recall.region.display_name, @recall.region %>
+    </div>
+  </div>
+  
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Contact</h3>
+    </div>
+    <div class="panel-body">
+      <%= 
+        if !Contact.find_by_id(@recall.contact_id) .nil?
+          link_to "Contacts", Contact.find_by_id(@recall.contact_id)
+        else
+          raw("no_contacts")
+        end
+      %>
+    </div>
+  </div>
+  
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Date</h3>
+    </div>
+    <div class="panel-body">
+       <%= @recall.date %>
+    </div>
+  </div>
+  
+  <%= link_to 'Edit', edit_recall_path(@recall), :class => 'btn btn-primary spacer' %>
+  <%= link_to 'Back', recalls_path, :class => 'btn btn-primary spacer' %>
+
+</div>

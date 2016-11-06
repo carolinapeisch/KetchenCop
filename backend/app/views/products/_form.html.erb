@@ -1,0 +1,45 @@
+<%= form_for(@product) do |f| %>
+  <% if @product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+      <ul>
+      <% @product.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <label for="name">Name</label>
+  <div class="input-group">
+    <span class="input-group-addon" id="basic-addon3">@</span>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+  
+  <label for="upc_code">UPC Code</label>
+  <div class="input-group">
+    <span class="input-group-addon" id="basic-addon3">@</span>
+    <%= f.text_field :upc_code, class: "form-control" %>
+  </div>
+  
+  <label for="product_code">Product Code</label>
+  <div class="input-group">
+    <span class="input-group-addon" id="basic-addon3">@</span>
+    <%= f.text_field :product_code, class: "form-control" %>
+  </div>
+  
+  <label for="sell_by_date">Sell by Date</label>
+  <div class="input-group">
+    <%= f.datetime_select :sell_by_date, class: "form-control" %>
+  </div>
+  
+  <label for="image_id">Image id</label>
+  <div class="input-group">
+    <span class="input-group-addon" id="basic-addon3">@</span>
+    <%= f.text_field :image_id, class: "form-control" %>
+  </div>
+  
+  <%= f.submit 'Confirm', :class => 'btn btn-primary spacer' %>
+  
+<% end %>

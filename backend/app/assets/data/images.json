@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "description": "the default image. sorry-image-not-available",
+    "filename": "sorry-image-not-available.png",
+    "category": 1
+  },
+  {
+    "id": 11,
+    "description": "new york city, post card",
+    "filename": "new-york-NY.jpg",
+    "category": 2
+  },
+  {
+    "id": 12,
+    "description": "seattle, post card",
+    "filename": "seattle-WA.jpg",
+    "category": 2
+  }
+]

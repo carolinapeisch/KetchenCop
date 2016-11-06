@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "product_id": 1,
+    "reason": "contain undeclared peanuts. People who have allergies to peanuts run the risk of serious or life-threatening allergic reaction if they consume these products.",
+    "level_id": 1,
+    "region_id": 1,
+    "contact_id": 1,
+    "date": "October 17, 2016"
+  },
+  {
+    "id": 2,
+    "product_id": 2,
+    "reason": "contain undeclared milk. People who have an allergy or severe sensitivity to milk run the risk of serious or life-threatening allergic reaction, if they consume these products.",
+    "level_id": 1,
+    "region_id": 2,
+    "contact_id": 1,
+    "date": "October 20, 2016"
+  }
+]

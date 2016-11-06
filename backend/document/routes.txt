@@ -1,0 +1,79 @@
+         Prefix Verb   URI Pattern                          Controller#Action
+           root GET    /                                    products#index
+       contacts GET    /contacts(.:format)                  contacts#index
+                POST   /contacts(.:format)                  contacts#create
+    new_contact GET    /contacts/new(.:format)              contacts#new
+   edit_contact GET    /contacts/:id/edit(.:format)         contacts#edit
+        contact GET    /contacts/:id(.:format)              contacts#show
+                PATCH  /contacts/:id(.:format)              contacts#update
+                PUT    /contacts/:id(.:format)              contacts#update
+                DELETE /contacts/:id(.:format)              contacts#destroy
+        regions GET    /regions(.:format)                   regions#index
+                POST   /regions(.:format)                   regions#create
+     new_region GET    /regions/new(.:format)               regions#new
+    edit_region GET    /regions/:id/edit(.:format)          regions#edit
+         region GET    /regions/:id(.:format)               regions#show
+                PATCH  /regions/:id(.:format)               regions#update
+                PUT    /regions/:id(.:format)               regions#update
+                DELETE /regions/:id(.:format)               regions#destroy
+         levels GET    /levels(.:format)                    levels#index
+                POST   /levels(.:format)                    levels#create
+      new_level GET    /levels/new(.:format)                levels#new
+     edit_level GET    /levels/:id/edit(.:format)           levels#edit
+          level GET    /levels/:id(.:format)                levels#show
+                PATCH  /levels/:id(.:format)                levels#update
+                PUT    /levels/:id(.:format)                levels#update
+                DELETE /levels/:id(.:format)                levels#destroy
+         images GET    /images(.:format)                    images#index
+                POST   /images(.:format)                    images#create
+      new_image GET    /images/new(.:format)                images#new
+     edit_image GET    /images/:id/edit(.:format)           images#edit
+          image GET    /images/:id(.:format)                images#show
+                PATCH  /images/:id(.:format)                images#update
+                PUT    /images/:id(.:format)                images#update
+                DELETE /images/:id(.:format)                images#destroy
+          users GET    /users(.:format)                     users#index
+                POST   /users(.:format)                     users#create
+       new_user GET    /users/new(.:format)                 users#new
+      edit_user GET    /users/:id/edit(.:format)            users#edit
+           user GET    /users/:id(.:format)                 users#show
+                PATCH  /users/:id(.:format)                 users#update
+                PUT    /users/:id(.:format)                 users#update
+                DELETE /users/:id(.:format)                 users#destroy
+      purchases GET    /purchases(.:format)                 purchases#index
+                POST   /purchases(.:format)                 purchases#create
+   new_purchase GET    /purchases/new(.:format)             purchases#new
+  edit_purchase GET    /purchases/:id/edit(.:format)        purchases#edit
+       purchase GET    /purchases/:id(.:format)             purchases#show
+                PATCH  /purchases/:id(.:format)             purchases#update
+                PUT    /purchases/:id(.:format)             purchases#update
+                DELETE /purchases/:id(.:format)             purchases#destroy
+       products GET    /products(.:format)                  products#index
+                POST   /products(.:format)                  products#create
+    new_product GET    /products/new(.:format)              products#new
+   edit_product GET    /products/:id/edit(.:format)         products#edit
+        product GET    /products/:id(.:format)              products#show
+                PATCH  /products/:id(.:format)              products#update
+                PUT    /products/:id(.:format)              products#update
+                DELETE /products/:id(.:format)              products#destroy
+  images_upload POST   /images/upload(.:format)             images#upload
+                GET    /images/*path(.:format)              redirect(301, images)
+products_upload POST   /products/upload(.:format)           products#upload
+                GET    /products/*path(.:format)            redirect(301, products)
+ regions_upload POST   /regions/upload(.:format)            regions#upload
+                GET    /regions/*path(.:format)             redirect(301, regions)
+contacts_upload POST   /contacts/upload(.:format)           contacts#upload
+                GET    /contacts/*path(.:format)            redirect(301, contacts)
+  levels_upload POST   /levels/upload(.:format)             levels#upload
+                GET    /levels/*path(.:format)              redirect(301, levels)
+ recalls_search GET    /recalls/search(.:format)            recalls#search
+ recalls_upload POST   /recalls/upload(.:format)            recalls#upload
+                GET    /recalls/:id/recalls/*path(.:format) redirect(301, recalls)
+        recalls GET    /recalls(.:format)                   recalls#index
+                POST   /recalls(.:format)                   recalls#create
+     new_recall GET    /recalls/new(.:format)               recalls#new
+    edit_recall GET    /recalls/:id/edit(.:format)          recalls#edit
+         recall GET    /recalls/:id(.:format)               recalls#show
+                PATCH  /recalls/:id(.:format)               recalls#update
+                PUT    /recalls/:id(.:format)               recalls#update
+                DELETE /recalls/:id(.:format)               recalls#destroy

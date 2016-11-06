@@ -1,0 +1,53 @@
+<%= form_for(@recall) do |f| %>
+  <% if @recall.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@recall.errors.count, "error") %> prohibited this recall from being saved:</h2>
+
+      <ul>
+      <% @recall.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <label for="product_id">Product id</label>
+  <div class="input-group">
+    <span class="input-group-addon" id="basic-addon3">@</span>
+    <%= f.text_field :product_id, class: "form-control", placeholder: 1 %>
+  </div>
+  
+
+  <label for="filename">Reason</label>
+  <div class="input-group">
+    <span class="input-group-addon" id="basic-addon3">@</span>
+    <%= f.text_field :reason, class: "form-control", placeholder: "illegal addictive." %>
+  </div>
+  
+  <label for="description">Level id</label>
+  <div class="input-group">
+    <span class="input-group-addon" id="basic-addon3">@</span>
+    <%= f.text_field :level_id, class: "form-control", placeholder: 1 %>
+  </div>
+  
+  <label for="description">Region id</label>
+  <div class="input-group">
+    <span class="input-group-addon" id="basic-addon3">@</span>
+    <%= f.text_field :region_id, class: "form-control", placeholder: 1 %>
+  </div>
+  
+    <label for="description">Contact id</label>
+  <div class="input-group">
+    <span class="input-group-addon" id="basic-addon3">@</span>
+    <%= f.text_field :contact_id, class: "form-control", placeholder: 1 %>
+  </div>
+  
+  <label for="description">date</label>
+  <div class="input-group">
+    <%= f.datetime_select :date, class: "form-control", placeholder: "2016-10-23 05:56:00 UTC" %>
+  </div>
+  
+  <%= f.submit 'Confirm', :class => 'btn btn-primary spacer' %>
+  
+<% end %>
+
