@@ -1,2 +1,2 @@
-# KetchenCop
-Company challenge with Bloomberg at Connell Tech
+# KttchenCop
+Company challenge with Bloomberg at Cornell Tech
