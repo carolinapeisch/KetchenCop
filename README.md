@@ -1,2 +1,2 @@
 # KitchenCop
-Company challenge with Bloomberg at Connell Tech
+Company challenge with Bloomberg at Cornell Tech
